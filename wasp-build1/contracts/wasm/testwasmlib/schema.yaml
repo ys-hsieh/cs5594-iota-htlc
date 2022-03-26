@@ -1,0 +1,132 @@
+name: TestWasmLib
+description: Exercise several aspects of WasmLib
+
+# ##################################
+events:
+# ##################################
+  test:
+    name: String
+    address: Address
+
+# ##################################
+structs:
+# ##################################
+# Location:
+#   x: Int32
+#   y: Int32
+
+# ##################################
+typedefs:
+# ##################################
+  StringArray: String[]
+  StringMap: map[String]String
+# Longitude: map[Int32]Location
+
+# ##################################
+state:
+# ##################################
+  arrays: map[String]StringArray
+  maps: map[String]StringMap
+  random: Uint64
+# latLong: map[Int32]Longitude
+
+# ##################################
+funcs:
+# ##################################
+  arrayAppend:
+    params:
+      name: String
+      value: String
+
+  arrayClear:
+    params:
+      name: String
+
+  arraySet:
+    params:
+      index: Uint32
+      name: String
+      value: String
+
+  mapClear:
+    params:
+      name: String
+
+  mapSet:
+    params:
+      name: String
+      key: String
+      value: String
+
+  paramTypes:
+    params:
+      address: Address?
+      agentID: AgentID?
+      bool: Bool?
+      bytes: Bytes?
+      chainID: ChainID?
+      color: Color?
+      hash: Hash?
+      hname: Hname?
+      int8: Int8?
+      int16: Int16?
+      int32: Int32?
+      int64: Int64?
+      param=this: map[String]Bytes? // special hook to be able to pass key/values as raw bytes
+      requestID: RequestID?
+      string: String?
+      uint8: Uint8?
+      uint16: Uint16?
+      uint32: Uint32?
+      uint64: Uint64?
+
+  random:
+
+  triggerEvent:
+    params:
+      name: String
+      address: Address
+
+# ##################################
+views:
+# ##################################
+  arrayLength:
+    params:
+      name: String
+    results:
+      length: Uint32
+
+  arrayValue:
+    params:
+      index: Uint32
+      name: String
+    results:
+      value: String
+
+  blockRecord:
+    params:
+      blockIndex: Uint32
+      recordIndex: Uint32
+    results:
+      record: Bytes
+
+  blockRecords:
+    params:
+      blockIndex: Uint32
+    results:
+      count: Uint32
+
+  iotaBalance:
+    results:
+      iotas: Uint64
+
+  mapValue:
+    params:
+      name: String
+      key: String
+    results:
+      value: String
+
+  getRandom:
+    results:
+      random: Uint64

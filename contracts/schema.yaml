@@ -1,0 +1,49 @@
+name: htlc
+description: "htlc"
+events: {}
+structs: {}
+typedefs: {}
+state:
+  owner: AgentID // current owner of this smart contract
+  secret: Hash
+  receivder: Address
+  initTime: Int64
+  time: Int64
+  value: Uint64
+funcs:
+  init:
+    params:
+      owner: AgentID? // optional owner of this smart contract
+  setOwner:
+    access: owner // current owner of this smart contract
+    params:
+      owner: AgentID // new owner of this smart contract
+  setSecret:
+    access: owner
+    params:
+      secret: Hash
+  setValue:
+    access: owner
+    params:
+      value: Uint64
+  setReceivder:
+    access: owner
+    params:
+      receivder: Address
+  setTime:
+    access: owner
+    params:
+      time: Int64
+  transfer:
+    params:
+      secret: Hash
+      key: Hash
+  withdraw:
+    access: owner
+views:
+  getOwner:
+    results:
+      owner: AgentID // current owner of this smart contract
+  getValue:
+    results:
+      value: Uint64

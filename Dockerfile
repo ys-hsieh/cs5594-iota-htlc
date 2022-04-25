@@ -25,6 +25,9 @@ EXPOSE 4000/udp
 
 COPY docker_config.json /etc/wasp_config.json
 
+RUN wget https://github.com/tinygo-org/tinygo/releases/download/v0.22.0/tinygo_0.22.0_amd64.deb
+RUN dpkg -i tinygo_0.22.0_amd64.deb
+
 RUN mkdir smart-contracts
 RUN apt upgrade && apt update
 RUN apt install -y vim

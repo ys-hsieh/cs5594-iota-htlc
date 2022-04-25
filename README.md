@@ -10,6 +10,10 @@ There are two types of HTLCs:
 
 The following instruction will walk you through both of them.
 
+## Demo Video
+1. WasmVM smart contract: [CS5594 Golang HTLC PoC](https://youtu.be/uInMscmOfCU)
+2. EVM smart contract
+
 ## Requirement
 - [GoShimmer](https://wiki.iota.org/goshimmer/welcome) node: In this project, we use the [GoShimmer Testnet](https://wiki.iota.org/smart-contracts/guide/chains_and_nodes/testnet).
 - [Wasp Node](https://wiki.iota.org/smart-contracts/overview)

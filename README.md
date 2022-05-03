@@ -114,3 +114,16 @@ $ ./wasp-cli chain post-request htlc funcWithdraw
 Transactions and address records can be found on the [Goshammer Explorer](https://goshimmer.sc.iota.org/explorer)
 
 ## Deploy EVM smart contract
+### 1. Deploy the EVM Chain Contract
+Deploy EVM contract on the chain according to EVM account
+```sh
+./wasp-cli chain evm deploy -a mychain --alloc accountname:1000000000000000000000000
+```
+
+## 2. Run JSON-RPC Interface
+Run the JSON-RPC server on port 8545 for you with Chain ID 1074. You can now point MetaMask or Hardhat to that server's address on port 8545
+```sh
+./wasp-cli chain evm jsonrpc
+```
+## 3. Complie Hash Time lock Smart Contract on Remix
+enter remix website https://remix.ethereum.org/, and upload HTLC.sol file to complie contract

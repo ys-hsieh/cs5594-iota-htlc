@@ -126,4 +126,4 @@ Run the JSON-RPC server on port 8545 for you with Chain ID 1074. You can now poi
 ./wasp-cli chain evm jsonrpc
 ```
 ## 3. Complie Hash Time lock Smart Contract on Remix
-enter remix website https://remix.ethereum.org/, and upload HTLC.sol file to complie contract
+Enter remix website https://remix.ethereum.org/, and upload HTLC.sol file to complie contract

@@ -115,7 +115,7 @@ Transactions and address records can be found on the [Goshammer Explorer](https:
 
 ## Deploy EVM smart contract
 ### 1. Deploy the EVM Chain Contract
-Deploy EVM contract on the chain according to EVM account
+Deploy EVM contract on the chain according to Meta Mask account adress
 ```sh
 ./wasp-cli chain evm deploy -a mychain --alloc accountname:1000000000000000000000000
 ```

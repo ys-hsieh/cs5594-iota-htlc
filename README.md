@@ -10,16 +10,16 @@ There are two types of HTLCs:
 
 The following instruction will walk you through both of them.
 
-## Demo Video
-1. WasmVM smart contract: [CS5594 Golang HTLC PoC](https://youtu.be/uInMscmOfCU)
-2. EVM smart contract
+## :film_strip: Demo Video
+1. WasmVM smart contract: [CS5594 WasmVM Golang HTLC PoC](https://youtu.be/uInMscmOfCU)
+2. EVM smart contract: [CS5594 EVM Solidity HTLC PoC](https://youtu.be/VFrBUBrENRc)
 
-## Requirement
+## :page_facing_up: Requirement
 - [GoShimmer](https://wiki.iota.org/goshimmer/welcome) node: In this project, we use the [GoShimmer Testnet](https://wiki.iota.org/smart-contracts/guide/chains_and_nodes/testnet).
 - [Wasp Node](https://wiki.iota.org/smart-contracts/overview)
 - Docker: The tutorial is set up with Docker, but feel free to use local set ups.
 
-## Installation
+## :rocket: Installation
 First we need to the Wasp Node
 
 ### 1. Update git submodule
@@ -83,7 +83,7 @@ This step is only for solidity smart contracts. You can skip this is you plan to
 
 Detail steps please follow the [official documents](https://wiki.iota.org/smart-contracts/guide/evm/create-chain) and [tutorial videos](https://www.youtube.com/watch?v=JbUGX-9BTSo)
 
-## Deploy WasmVM smart contract
+## :bee: Deploy WasmVM smart contract
 ### 1. Compile contract
 Inside the running container, use the following command to compile the HTLC smart contract
 ```sh
@@ -113,17 +113,18 @@ $ ./wasp-cli chain post-request htlc funcWithdraw
 
 Transactions and address records can be found on the [Goshammer Explorer](https://goshimmer.sc.iota.org/explorer)
 
-## Deploy EVM smart contract
+## :link: Deploy EVM smart contract
 ### 1. Deploy the EVM Chain Contract
 Deploy EVM contract on the chain according to MetaMask account adress
 ```sh
-./wasp-cli chain evm deploy -a mychain --alloc accountname:1000000000000000000000000
+$ ./wasp-cli chain evm deploy -a mychain --alloc accountname:1000000000000000000000000
 ```
 
-## 2. Run JSON-RPC Interface
+### 2. Run JSON-RPC Interface
 Run the JSON-RPC server on port 8545 for you with Chain ID 1074. You can now point MetaMask or Hardhat to that server's address on port 8545
 ```sh
-./wasp-cli chain evm jsonrpc
+$ ./wasp-cli chain evm jsonrpc
 ```
-## 3. Complie Hash Time lock Smart Contract on Remix
+
+### 3. Complie Hash Time lock Smart Contract on Remix
 Enter remix website https://remix.ethereum.org/, and upload HTLC.sol file to complie contract
